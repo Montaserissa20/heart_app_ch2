@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2beede",
+                        "background-light": "#f6f8f8",
+                        "background-dark": "#102220",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Lexend', sans-serif; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen flex justify-center">
+<div class="relative flex h-full min-h-screen w-full max-w-[430px] flex-col bg-white dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Header -->
+<div class="flex items-center bg-white dark:bg-background-dark p-4 pb-2 sticky top-0 z-10 border-b border-slate-100 dark:border-slate-800">
+<button class="text-slate-900 dark:text-slate-100 flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h2 class="text-slate-900 dark:text-slate-100 text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-10">Surgery Recovery</h2>
+</div>
+<!-- Audio Player Component -->
+<div class="px-4 py-4">
+<div class="flex flex-col gap-3 rounded-xl bg-primary/10 dark:bg-primary/5 px-4 py-4 border border-primary/20">
+<div class="flex items-center gap-4 overflow-hidden">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14 shrink-0 shadow-sm" data-alt="Doctor explaining recovery process to patient" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCWFlTHC99B045txeF_-T9qt9rqEzc2uwEkxYnn9HCMWVtfZtu2DaPydo1vMC6P7KhEGSpbAYWBztnLMn2rsUKDqKfvSfVhQv4GoBbDtG6T1nb6va2lS3V-WUlV8ki_sD-s8xmoclBu3BWteqGN5vcEY_tkcLOmepQg9oqtmchXjuyAXa05h0ur1ozXiIJVxUpaaL5cp_xnmGHpEd9iWdp8eaPsgHBgEXizOeYLjh9Mqnia_H1YLkJCrHx4-bKliA8awzaDDqfW2KhS");'></div>
+<div class="flex-1">
+<p class="text-slate-900 dark:text-slate-100 text-base font-bold leading-tight truncate">Post-Op Day 1 Guide</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal truncate">Audio Narrator: Dr. Sarah Smith</p>
+</div>
+<button class="flex shrink-0 items-center justify-center rounded-full size-12 bg-primary text-slate-900 shadow-md active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-[32px]">play_arrow</span>
+</button>
+</div>
+<div class="pt-2">
+<div class="flex h-4 items-center justify-center">
+<div class="h-1.5 flex-[0.4] rounded-l-full bg-primary"></div>
+<div class="relative">
+<div class="absolute -left-2 -top-2.5 size-5 rounded-full bg-primary border-2 border-white dark:border-background-dark shadow-md"></div>
+</div>
+<div class="h-1.5 flex-[0.6] rounded-r-full bg-slate-200 dark:bg-slate-700"></div>
+</div>
+<div class="flex items-center justify-between mt-1">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal tracking-[0.015em]">0:45</p>
+<p class="text-slate-500 dark:text-slate-400 text-xs font-medium leading-normal tracking-[0.015em]">3:12</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Text Size Selector -->
+<div class="px-4 py-2">
+<p class="text-slate-500 dark:text-slate-400 text-xs font-bold uppercase tracking-widest text-center mb-2">Adjust Reading Size</p>
+<div class="flex h-12 items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-sm font-medium transition-all">
+<span class="truncate">Small</span>
+<input class="hidden" name="text-size" type="radio" value="Small"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-sm font-medium transition-all">
+<span class="truncate">Medium</span>
+<input checked="" class="hidden" name="text-size" type="radio" value="Medium"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-primary text-slate-500 dark:text-slate-400 text-sm font-medium transition-all">
+<span class="truncate">Large</span>
+<input class="hidden" name="text-size" type="radio" value="Large"/>
+</label>
+</div>
+</div>
+<!-- Main Content Scroll Area -->
+<div class="flex-1 px-5 py-6 overflow-y-auto no-scrollbar">
+<article class="prose prose-slate dark:prose-invert max-w-none">
+<h1 class="text-2xl font-bold text-slate-900 dark:text-white mb-4">Initial Recovery: Day 1 &amp; 2</h1>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                    After your heart surgery, the first 24 to 48 hours are focused on stabilization. You will likely wake up in the Intensive Care Unit (ICU) where medical staff will monitor your vitals closely.
+                </p>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mt-6 mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">air</span>
+                    Breathing Exercises
+                </h3>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                    It is crucial to use your incentive spirometer every hour while awake. This helps prevent lung complications such as pneumonia. Take a deep breath in through the device, hold for 3 seconds, and exhale slowly.
+                </p>
+<h3 class="text-lg font-bold text-slate-900 dark:text-white mt-6 mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">directions_walk</span>
+                    Early Mobility
+                </h3>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                    The nursing team will assist you in sitting on the edge of the bed or moving to a chair. Movement is essential for circulation and digestive health. Always use your heart pillow to "splint" your chest when moving or coughing.
+                </p>
+<div class="my-8 p-4 bg-slate-50 dark:bg-slate-800/50 rounded-xl border-l-4 border-primary italic text-slate-600 dark:text-slate-400">
+                    "Recovery is a marathon, not a sprint. Take small steps each day and communicate any discomfort with your nurse immediately."
+                </div>
+<p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-10">
+                    Your pain will be managed through a combination of medications. Inform your care team if your pain level exceeds a 4 out of 10.
+                </p>
+</article>
+<!-- Action Buttons -->
+<div class="flex flex-col gap-3 pb-8">
+<button class="flex w-full items-center justify-center gap-2 rounded-xl bg-slate-900 dark:bg-slate-100 text-white dark:text-slate-900 h-14 font-bold shadow-lg active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined">play_circle</span>
+                    Watch Educational Video
+                </button>
+<button class="flex w-full items-center justify-center gap-2 rounded-xl border-2 border-slate-200 dark:border-slate-800 bg-transparent text-slate-600 dark:text-slate-400 h-14 font-bold active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined">rate_review</span>
+                    Give Feedback
+                </button>
+</div>
+</div>
+<!-- Bottom Navigation Bar -->
+<div class="flex gap-2 border-t border-slate-100 dark:border-slate-800 bg-white dark:bg-background-dark px-4 pb-6 pt-3">
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-600" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium leading-normal uppercase">Home</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">book_4</span>
+<p class="text-[10px] font-medium leading-normal uppercase">Education</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-600" href="#">
+<span class="material-symbols-outlined">fitness_center</span>
+<p class="text-[10px] font-medium leading-normal uppercase">Exercises</p>
+</a>
+<a class="flex flex-1 flex-col items-center justify-end gap-1 text-slate-400 dark:text-slate-600" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium leading-normal uppercase">Profile</p>
+</a>
+</div>
+</div>
+</body></html>
